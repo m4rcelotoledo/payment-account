@@ -59,7 +59,7 @@ FROM base
 RUN groupadd --system --gid 1000 rails && \
     useradd rails --uid 1000 --gid 1000 --create-home --shell /bin/bash && \
     mkdir -p /rails/storage && \
-    chown -R 1000:1000 /rails/storage
+    chown rails:rails /rails/storage
 USER 1000:1000
 
 # Copy built artifacts: gems, application
