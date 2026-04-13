@@ -40,3 +40,6 @@
 
 .byebug_history
 .tool-versions
+
+# Ignore coverage
+coverage
