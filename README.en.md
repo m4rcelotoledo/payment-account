@@ -110,3 +110,22 @@ GitHub Actions runs on every pull request and push to `master`:
 3. Test suite (RSpec)
 
 Deploy to Railway triggers automatically after all checks pass on `master`.
+
+## Deploy
+
+The application is live at: https://objective-payment-account-production.up.railway.app
+
+Hosted on Railway via Docker. Deploy triggers automatically on every push to `master` after all CI checks pass.
+
+> Data is volatile in this environment — the container's ephemeral filesystem does not preserve SQLite between redeploys.
+
+## Possible Next Steps
+
+- JWT authentication
+- Transaction history per account
+- Robust persistence with PostgreSQL
+- Rate limiting per account
+- Transaction history pagination
+- Account statement with filters by date range and payment method
+- Account balance top-up
+- etc.

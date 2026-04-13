@@ -112,3 +112,22 @@ O GitHub Actions executa em todo pull request e push para `master`:
 3. Suite de testes (RSpec)
 
 O deploy no Railway é disparado automaticamente após todos os checks passarem no `master`.
+
+## Deploy
+
+A aplicação está disponível em: https://objective-payment-account-production.up.railway.app
+
+Hospedada no Railway via Docker. O deploy é disparado automaticamente a cada push na branch `master` após todos os checks do CI passarem.
+
+> Os dados são voláteis no ambiente de deploy — o filesystem efêmero do container não preserva o SQLite entre redeploys.
+
+## Próximos Passos Viáveis
+
+- Autenticação via JWT
+- Histórico de transações por conta
+- Persistência robusta com PostgreSQL
+- Rate limiting por conta
+- Paginação no histórico de transações
+- Extrato com filtro por período e forma de pagamento
+- Adicionar crédito na conta
+- etc.
