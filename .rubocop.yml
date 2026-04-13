@@ -1,0 +1,42 @@
+plugins:
+  - rubocop-factory_bot
+  - rubocop-performance
+  - rubocop-rails
+  - rubocop-rspec
+  - rubocop-rspec_rails
+
+AllCops:
+  Exclude:
+    - 'db/**/*'
+    - 'Rakefile'
+    - 'config/**/*'
+    - 'vendor/**/*'
+
+  NewCops: enable
+
+  TargetRailsVersion: 8.0
+  TargetRubyVersion: 4.0
+
+  UseCache: false
+
+FactoryBot/ExcessiveCreateList:
+  Enabled: false
+
+Layout/DotPosition:
+  EnforcedStyle: trailing
+
+Metrics/BlockLength:
+  Exclude:
+    - spec/**/*
+
+RSpec/ExampleLength:
+  Enabled: false
+RSpec/MultipleExpectations:
+  Enabled: false
+RSpec/MultipleMemoizedHelpers:
+  Enabled: false
+
+Style/ClassAndModuleChildren:
+  EnforcedStyle: compact
+Style/Documentation:
+  Enabled: false
