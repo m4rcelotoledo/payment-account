@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   post '/account', to: 'accounts#create'
   get  '/account', to: 'accounts#show'
+  post '/transaction', to: 'transactions#create'
 end
