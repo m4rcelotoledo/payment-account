@@ -67,7 +67,7 @@ Content-Type: application/json
 - O saldo da conta nunca pode ser negativo (sem cheque especial)
 - Números de conta duplicados não são permitidos
 - As taxas são aplicadas sobre o valor da transação
-- Os dados são persistidos durante a execução; reiniciar o servidor zera o banco (SQLite)
+- Os dados são persistidos em arquivo pelo SQLite; reiniciar o servidor não zera o banco local. Em ambientes com filesystem efêmero (como alguns deploys em container/Railway sem volume persistente), os dados podem ser perdidos se o diretório `storage/` não for preservado
 
 ## Executando Localmente
 
@@ -89,6 +89,13 @@ bundle exec rspec
 ```
 
 O relatório de cobertura é gerado em `coverage/index.html` após a execução da suite.
+
+## Testando Manualmente
+
+O arquivo `test.http` na raiz do projeto permite testar todos os endpoints manualmente.
+
+Compatível com:
+- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) (VS Code)
 
 ## Arquitetura
 

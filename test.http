@@ -1,0 +1,113 @@
+@baseUrl = http://localhost:3000
+@contentType = application/json
+@account_number = 234
+
+###
+### Accounts
+###
+
+### Create account
+POST {{baseUrl}}/account
+Content-Type: {{contentType}}
+
+{
+  "account": {
+    "account_number": {{account_number}},
+    "balance": 180.37
+  }
+}
+
+### Get existing account
+GET {{baseUrl}}/account?account_number={{account_number}}
+Accept: application/json
+
+### Get missing account
+GET {{baseUrl}}/account?account_number=9999
+Accept: application/json
+
+### Create duplicate account
+POST {{baseUrl}}/account
+Content-Type: {{contentType}}
+
+{
+  "account": {
+    "account_number": {{account_number}},
+    "balance": 50.0
+  }
+}
+
+###
+### Transactions
+###
+
+### Pix payment
+POST {{baseUrl}}/transaction
+Content-Type: {{contentType}}
+
+{
+  "transaction": {
+    "payment_method": "P",
+    "account_number": {{account_number}},
+    "amount": 10.0
+  }
+}
+
+### Debit card payment
+POST {{baseUrl}}/transaction
+Content-Type: {{contentType}}
+
+{
+  "transaction": {
+    "payment_method": "D",
+    "account_number": {{account_number}},
+    "amount": 10.0
+  }
+}
+
+### Credit card payment
+POST {{baseUrl}}/transaction
+Content-Type: {{contentType}}
+
+{
+  "transaction": {
+    "payment_method": "C",
+    "account_number": {{account_number}},
+    "amount": 10.0
+  }
+}
+
+### Insufficient balance
+POST {{baseUrl}}/transaction
+Content-Type: {{contentType}}
+
+{
+  "transaction": {
+    "payment_method": "P",
+    "account_number": {{account_number}},
+    "amount": 9999.0
+  }
+}
+
+### Invalid payment method
+POST {{baseUrl}}/transaction
+Content-Type: {{contentType}}
+
+{
+  "transaction": {
+    "payment_method": "X",
+    "account_number": {{account_number}},
+    "amount": 10.0
+  }
+}
+
+### Missing account
+POST {{baseUrl}}/transaction
+Content-Type: {{contentType}}
+
+{
+  "transaction": {
+    "payment_method": "P",
+    "account_number": 9999,
+    "amount": 10.0
+  }
+}

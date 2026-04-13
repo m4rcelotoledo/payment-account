@@ -65,7 +65,7 @@ Content-Type: application/json
 - Account balance can never be negative (no overdraft)
 - Duplicate account numbers are not allowed
 - Transaction fees are applied on top of the requested amount
-- Data is persisted during runtime; restarting the server resets the database (SQLite)
+- Data is stored in a file-backed SQLite database and normally persists across server restarts; it is only reset if the database file is removed or the app runs on ephemeral filesystem storage
 
 ## Running Locally
 
@@ -87,6 +87,13 @@ bundle exec rspec
 ```
 
 Coverage report is generated at `coverage/index.html` after running the suite.
+
+## Manual Testing
+
+The `test.http` file at the root of the project allows you to test all endpoints manually.
+
+Compatible with:
+- [REST Client](https://marketplace.visualstudio.com/items?itemName=humao.rest-client) (VS Code)
 
 ## Architecture
 
