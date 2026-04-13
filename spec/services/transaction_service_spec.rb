@@ -6,7 +6,7 @@ RSpec.describe TransactionService do
   describe '#call' do
     subject(:result) { described_class.new(account, payment_method, amount).call }
 
-    let(:account) { create(:account, account_number: rand(1_000_000_000), balance: 100.0) }
+    let(:account) { create(:account, balance: 100.0) }
     let(:amount) { 50.0 }
 
     context 'when payment method is invalid' do
