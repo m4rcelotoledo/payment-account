@@ -12,6 +12,7 @@ gem 'tzinfo-data', platforms: %i[windows jruby]
 group :development, :test do
   gem 'brakeman', require: false
   gem 'bundler-audit', require: false
+  gem 'database_cleaner-active_record'
   gem 'factory_bot_rails'
   gem 'faker'
   gem 'pry-byebug'
