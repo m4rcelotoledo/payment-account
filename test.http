@@ -4,6 +4,12 @@
 @account_number = 234
 
 ###
+### Health check
+###
+
+GET {{baseUrl}}/up
+
+###
 ### Accounts
 ###
 
@@ -14,7 +20,7 @@ Content-Type: {{contentType}}
 {
   "account": {
     "account_number": {{account_number}},
-    "balance": 180.37
+    "balance": 500.0
   }
 }
 
