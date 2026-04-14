@@ -100,7 +100,7 @@ Compatível com:
 ## Arquitetura
 
 - **Controllers** — finos, responsáveis apenas por entrada e saída HTTP
-- **TransactionService** — encapsula o cálculo de taxas e a validação de saldo
+- **TransactionService** — implementa o padrão *Service Object*, encapsulando o cálculo de taxas e a validação de saldo
 - **Models** — validações e integridade dos dados
 
 ## CI/CD
