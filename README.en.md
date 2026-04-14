@@ -98,7 +98,7 @@ Compatible with:
 ## Architecture
 
 - **Controllers** — thin, handle only HTTP input/output
-- **TransactionService** — encapsulates fee calculation and balance validation
+- **TransactionService** — implements the *Service Object* pattern, encapsulating fee calculation and balance validation
 - **Models** — validations and data integrity
 
 ## CI/CD
