@@ -121,6 +121,10 @@ Hospedada no Railway via Docker. O deploy é disparado automaticamente a cada pu
 
 > Os dados são voláteis no ambiente de deploy — o filesystem efêmero do container não preserva o SQLite entre redeploys.
 
+### Health Check
+
+`GET /up` — retorna `200 OK` se a aplicação estiver no ar.
+
 ## Próximos Passos Viáveis
 
 - Autenticação via JWT

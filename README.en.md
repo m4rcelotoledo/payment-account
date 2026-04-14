@@ -119,6 +119,10 @@ Hosted on Railway via Docker. Deploy triggers automatically on every push to `ma
 
 > Data is volatile in this environment — the container's ephemeral filesystem does not preserve SQLite between redeploys.
 
+### Health Check
+
+`GET /up` — returns `200 OK` if the application is running.
+
 ## Possible Next Steps
 
 - JWT authentication
