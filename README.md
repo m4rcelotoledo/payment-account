@@ -123,7 +123,7 @@ Hospedada no Railway via Docker. O deploy é disparado automaticamente a cada pu
 
 ### Health Check
 
-`GET /up` — retorna `200 OK` se a aplicação estiver no ar.
+`GET /up` — retorna `200 OK` se a aplicação estiver no ar e `500 Internal Server Error` se a aplicação falhar ao iniciar ou se o health check falhar.
 
 ## Próximos Passos Viáveis
 

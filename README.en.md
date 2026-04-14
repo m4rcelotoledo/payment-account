@@ -121,7 +121,7 @@ Hosted on Railway via Docker. Deploy triggers automatically on every push to `ma
 
 ### Health Check
 
-`GET /up` — returns `200 OK` if the application is running.
+`GET /up` — returns `200 OK` if the application is healthy, and `500 Internal Server Error` if the application fails to boot or the health check fails.
 
 ## Possible Next Steps
 
