@@ -115,7 +115,7 @@ O deploy no Railway é disparado automaticamente após todos os checks passarem 
 
 ## Deploy
 
-A aplicação está disponível em: https://objective-payment-account-production.up.railway.app
+A aplicação está disponível em: [RailwayAppAPI](https://objective-payment-account-production.up.railway.app/up)
 
 Hospedada no Railway via Docker. O deploy é disparado automaticamente a cada push na branch `master` após todos os checks do CI passarem.
 
