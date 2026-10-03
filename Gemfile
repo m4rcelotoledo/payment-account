@@ -5,7 +5,7 @@ source 'https://rubygems.org'
 gem 'bootsnap', require: false
 gem 'puma', '>= 8.0'
 gem 'rack-cors'
-gem 'rails', '~> 8.1.3'
+gem 'rails', '~> 8.1.4'
 gem 'sqlite3', '~> 2.9'
 gem 'tzinfo-data', platforms: %i[windows jruby]
 
